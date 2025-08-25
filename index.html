@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+
+    <script src="./script.js"></script>
+
+    <style>
+      .main {
+        min-height: 500px;
+        min-width: 340px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+        padding: 30px 40px;
+      }
+      input {
+        color: #be4646;
+        width: 150px;
+        height: 30px;
+        background-color: black;
+        border: none;
+        border-radius: 15px;
+        padding: 20px 20px;
+      }
+      button {
+        width: 200px;
+        background-color: #be4646;
+        border: none;
+        border-radius: 15px;
+        height: 33px;
+        color: white;
+      }
+      h2 {
+        font-size: 45px;
+        color: white;
+      }
+      h6 {
+        font-size: 14px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="d-flex align-items-center justify-content-center"
+      style="min-height: 100vh; background-color: rgb(23, 22, 22)"
+    >
+      <div class="main">
+        <h1 class="text-center fw-bold" style="color: #be4646">
+          BMI Calculator
+        </h1>
+        <div
+          class="d-flex align-items-center justify-content-between mt-5 mb-3"
+          style="width: 100%"
+        >
+          <label style="color: #a04f4f" for="">Your weight</label>
+          <input id="weight" placeholder="kg" type="text" />
+        </div>
+        <div
+          class="d-flex align-items-center justify-content-between mb-4"
+          style="width: 100%"
+        >
+          <label style="color: #a04f4f" for="">Your height</label>
+          <input id="height" placeholder="m" type="text" />
+        </div>
+        <button onclick="calculate()" class="d-block mx-auto">Calculate</button>
+        <div
+          class="mt-5 mb-2 d-flex align-items-center justify-content-center"
+        >
+          <div class="me-2"><h2 id="result"></h2></div>
+          <div class="mt-1">
+            <h6 id="disp" style="display: none;" class="mb-0">BMI</h6>
+            <h6 id="category"></h6>
+          </div>
+        </div>
+        <div style="position: relative;">
+          <div id="slide" style="top: -3px; width: 38%; height: 13px; border-right: 3px solid white; position: absolute;"></div>
+          <div style="background: linear-gradient(to right, yellow, green, orange, red); height: 6px; border-radius: 5px;"></div>
+
+        </div>
+        <div class="mt-5">
+          <p style="color: white; margin-bottom: 4px">BMI Categories</p>
+          <ul class="ps-0 list-unstyled" style="font-size: 13px">
+            <li style="color: yellow">Underweight = < 18.5</li>
+            <li style="color: green">Normal = 18.5 - 24.9</li>
+            <li style="color: orange">Overweight = 25 - 29.9</li>
+            <li style="color: red">Obese = > 30</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
